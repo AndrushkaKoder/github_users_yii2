@@ -73,6 +73,14 @@ services:
     networks:
       - backend
 
+  yii_console:
+    build:
+      context: '_docker/dockerfiles'
+      dockerfile: php.Dockerfile
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - backend
 
 volumes:
   database_data:
